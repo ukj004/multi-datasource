@@ -1,0 +1,32 @@
+server:
+  port: 8091
+
+spring:
+  r2dbc:
+      driver: postgresql
+      maxSize: 40
+  r2dbc1:
+      host: localhost
+      port: 5432
+      username: postgres
+      password: soil
+      database: postgres
+  r2dbc2:
+      host: localhost
+      port: 5432
+      username: postgres
+      password: soil
+      database: postgresDb
+
+logging:
+  level:
+    org.springframework.data.r2dbc: DEBUG
+  pattern:
+    level: "[%thread] [%X{correlationId}] %-5level %logger{36} - %msg%n"
+
+
+##
+## Logging level
+##
+#logging.level.com.example=DEBUG
+#logging.level.io.r2dbc=DEBUG
